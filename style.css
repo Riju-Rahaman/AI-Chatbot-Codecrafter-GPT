@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+.chat-container {
+  width: 100%;
+  height: 80%;
+  background-color: rgb(45, 52, 59);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  overflow: auto;
+}
+.user-chat-box {
+  width: 60%;
+  position: relative;
+  left: 40%;
+}
+.ai-chat-box {
+  width: 60%;
+  position: relative;
+}
+.user-chat-area {
+  width: 90%;
+  padding: 20px;
+  background-color: black;
+  color: rgb(227, 236, 244);
+  border-radius: 40px 0px 40px 40px;
+  box-shadow: 2px 2px 10px black;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.chooseimg {
+  width: 30%;
+  border-radius: 30px;
+}
+.ai-chat-area {
+  width: 90%;
+  padding: 20px;
+  background-color: rgb(36, 33, 45);
+  position: relative;
+  left: 10%;
+  color: rgb(227, 236, 244);
+  border-radius: 0px 40px 40px 40px;
+  box-shadow: 2px 2px 10px black;
+}
+#userImage {
+  position: absolute;
+  right: 0;
+  filter: drop-shadow(2px 2px 10px black);
+}
+#aiImage {
+  position: absolute;
+  left: 0;
+  filter: drop-shadow(2px 2px 10px black);
+}
+
+.prompt-area {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(45, 52, 59);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.prompt-area input {
+  width: 50%;
+  height: 80px;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 20px;
+  color: aliceblue;
+  font-size: 20px;
+}
+.prompt-area button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.prompt-area button:hover {
+  background-color: rgba(184, 172, 172, 0.501);
+}
+.prompt-area button image {
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* css */
+
+/* From Uiverse.io by Li-Deheng */
+.loader {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  --color: hsl(0, 0%, 87%);
+  --animation: 2s ease-in-out infinite;
+}
+
+.loader .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: solid 2px var(--color);
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: transparent;
+  animation: circle-keys var(--animation);
+}
+
+.loader .circle .dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color);
+  animation: dot-keys var(--animation);
+}
+
+.loader .circle .outline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  animation: outline-keys var(--animation);
+}
+
+.circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(2) .dot {
+  animation-delay: 0.3s;
+}
+
+.circle:nth-child(3) .dot {
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(4) .dot {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(5) .dot {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(1) .outline {
+  animation-delay: 0.9s;
+}
+
+.circle:nth-child(2) .outline {
+  animation-delay: 1.2s;
+}
+
+.circle:nth-child(3) .outline {
+  animation-delay: 1.5s;
+}
+
+.circle:nth-child(4) .outline {
+  animation-delay: 1.8s;
+}
+
+.circle:nth-child(5) .outline {
+  animation-delay: 2.1s;
+}
+
+@keyframes circle-keys {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dot-keys {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes outline-keys {
+  0% {
+    transform: scale(0);
+    outline: solid 16px var(--color);
+    outline-offset: 0;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    outline: solid 0 transparent;
+    outline-offset: 15px;
+    opacity: 0;
+  }
+}
+
+.choose {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .user-chat-box {
+    width: 80%;
+    left: 20%;
+  }
+  .ai-chat-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .user-chat-box {
+    width: 80%;
+    left: 20%;
+  }
+  .ai-chat-box {
+    width: 80%;
+  }
+  .chat-container {
+    font-size: 16px;
+  }
+
+  .prompt-area {
+    width: 100%;
+    height: 20%;
+    gap: 6px;
+  }
+  .prompt-area input {
+    width: 58%;
+    height: 80px;
+    font-size: 18px;
+  }
+}

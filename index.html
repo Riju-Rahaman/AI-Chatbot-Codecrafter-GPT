@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Chat Bot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="ai-chat-box">
+        <img src="a2.png" alt="" id="aiImage" width="10%" />
+        <div class="ai-chat-area">Hello !How Can I help you Today? I am Codecrafter gpt</div>
+      </div>
+    </div>
+    <div class="prompt-area">
+      <input type="text" id="prompt" placeholder="Message..." />
+      <button id="submit">
+        <img src="upload-arrow.png" width="60" alt="" />
+      </button>
+
+      <button id="image">
+        <img src="image.png" width="40" alt="" id="img" /><input
+          type="file"
+          hidden
+          accept="image/*"
+        />
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
